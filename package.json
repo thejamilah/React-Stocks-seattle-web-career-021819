@@ -12,5 +12,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "Welcome to the Flatiron Stock Exchange! Today, you are a broker who is trying to better organize the stocks available on the Flatiron Stock Market. The database of stocks can be found in a JSON-server, so before you start your React server, make sure to start your JSON-server on `http://localhost:3000/stocks`.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejamilah/React-Stocks-seattle-web-career-021819.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thejamilah/React-Stocks-seattle-web-career-021819/issues"
+  },
+  "homepage": "https://github.com/thejamilah/React-Stocks-seattle-web-career-021819#readme"
 }
