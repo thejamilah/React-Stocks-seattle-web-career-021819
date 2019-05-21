@@ -14,6 +14,7 @@ class MainContainer extends Component {
 
     this.purchaseStock = this.purchaseStock.bind(this)
     this.sellStock = this.sellStock.bind(this)
+    this.filterStock = this.filterStock.bind(this)
   }
 
   //It's a good idea to ude componentDidMount while using fetch statements. Good spot for network requests. Gets instantiated/fired upon component construction/is created.
@@ -45,6 +46,23 @@ class MainContainer extends Component {
     })
     this.setState({userPortfolio})
   }
+
+  filterStock() {
+
+  }
+
+  //This is the logic to check if the selected item exists; if it exists then just that clicked item should be removed
+  // sellStock(stock) {
+  //   let isSold = false
+  //   let userPortfolio = this.state.userPortfolio.filter(sold => {
+  //     if (!isSold && sold === stock) {
+  //       isSold = true
+  //       return false
+  //     }
+  //     return true
+  //   })
+  //   this.setState({userPortfolio})
+  // }
 
   render() {
     return (
