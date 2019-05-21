@@ -11,6 +11,9 @@ class MainContainer extends Component {
       displayStocks: [],
       userPortfolio: [],
     }
+
+    this.purchaseStock = this.purchaseStock.bind(this)
+    this.sellStock = this.sellStock.bind(this)
   }
 
   //It's a good idea to ude componentDidMount while using fetch statements. Good spot for network requests. Gets instantiated/fired upon component construction/is created.
@@ -27,8 +30,20 @@ class MainContainer extends Component {
     })
   }
 
-  buyStock() {
-    
+  purchaseStock(stock) {
+    //using spread operator to copy the state of userPorfolio 
+    console.log('BUY', stock)
+    this.setState({
+      userPortfolio: [...this.state.userPortfolio, stock]
+    })
+  }
+
+  sellStock(stock) {
+    console.log('SELL', stock)
+    let userPortfolio = this.state.userPortfolio.filter(sell => {
+      return sell !== stock
+    })
+    this.setState({userPortfolio})
   }
 
   render() {
@@ -39,12 +54,12 @@ class MainContainer extends Component {
           <div className="row">
             <div className="col-8">
 
-              <StockContainer stocks={this.state.displayStocks}/>
+              <StockContainer stocks={this.state.displayStocks} purchaseStock={this.purchaseStock} />
 
             </div>
             <div className="col-4">
 
-              <PortfolioContainer />
+              <PortfolioContainer userPortfolio={this.state.userPortfolio} sellStock={this.sellStock} />
 
             </div>
           </div>
