@@ -12,9 +12,10 @@ class MainContainer extends Component {
       userPortfolio: [],
     }
 
+    this.sortBy = this.sortBy.bind(this)
+    this.filterStock = this.filterStock.bind(this)
     this.purchaseStock = this.purchaseStock.bind(this)
     this.sellStock = this.sellStock.bind(this)
-    this.filterStock = this.filterStock.bind(this)
   }
 
   //It's a good idea to ude componentDidMount while using fetch statements. Good spot for network requests. Gets instantiated/fired upon component construction/is created.
@@ -47,6 +48,9 @@ class MainContainer extends Component {
     this.setState({userPortfolio})
   }
 
+  sortBy() {
+    
+  }
   filterStock() {
 
   }
